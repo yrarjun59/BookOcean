@@ -18,7 +18,7 @@ const Caurosel = ({ images }) => {
   };
   return (
     <div className="relative  h-[300px] bg-[#FFF3D7]">
-      <div className>
+      <div>
         <img
           className="w-[200px] y-[300px] mx-[370px] align-middle"
           src={images[currentIndex]}

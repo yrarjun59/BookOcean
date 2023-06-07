@@ -1,26 +1,30 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Header from "./components/Header";
+import React from "react";
 
-import React from 'react'
-import LoginForm from "./components/LoginForm";
-import Test from "./components/Test";
+import { Link } from "react-router-dom";
+// import Header from "../components/Header";
+
 import HomeScreen from "./screen/HomeScreen";
 import Footer from "./components/Footer";
+import Header from "./components/Header";
+
+import { Routes, Route } from "react-router-dom";
+import LoginScreen from "./screen/LoginScreen";
+import RegisterScreen from "./screen/RegisterScreen";
 
 function App() {
   return (
-    <div>
-      <Header/>
-      {/* <LoginForm/> */}
-       <HomeScreen/>
-      {/* <HomeScreen/> */}
-      {/* <Footer/> */}
+    <div className="App">
+      <main>
+        <Header />
+
+        <Routes>
+          <Route path="/" element={<HomeScreen />} exact />
+          <Route path="/Login" element={<LoginScreen />} exact />
+          <Route path="/Register" element={<RegisterScreen />} exact />
+        </Routes>
+      </main>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

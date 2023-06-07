@@ -1,7 +1,7 @@
 import React from "react";
-import Test from "../components/Test";
 import Caurosel from "../components/Caurosel";
 import Products from "../components/Products";
+import Header from "../components/Header";
 
 function HomeScreen() {
   const carouselImages = [
@@ -11,7 +11,6 @@ function HomeScreen() {
   ];
   return (
     <div className="mx-[150px] my-5">
-      {/* Moto */}
       <p className="text-center my-[25px] text-[#D90077] text-[40px] font-bold">
         The Book is the Magic You hold on your hand
       </p>
@@ -20,7 +19,7 @@ function HomeScreen() {
       {/*  */}
 
       {/* Products */}
-      <Products/>
+      <Products />
     </div>
   );
 }
