@@ -9,11 +9,12 @@ from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
 from rest_framework import status
 
-from .serializers import UserSerializer, UserSerializerWithToken
+from .serializers import UserSerializer, UserSerializerWithToken, BookSerializer
 
 from django.contrib.auth.models import User
 from django.contrib.auth.hashers import make_password, check_password
 
+from .models import *
 
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
     def validate(self, attrs):
@@ -60,4 +61,11 @@ def getUserProfile(request):
 def getUsers(request):
     users = User.objects.all()
     serializer = UserSerializer(users, many=True)
+    return Response(serializer.data)
+
+
+@api_view(['GET'])
+def getBooks(request):
+    books = Book.objects.all()
+    serializer = BookSerializer(books, many=True)
     return Response(serializer.data)
