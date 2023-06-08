@@ -1,7 +1,6 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
-// import Header from "../components/Header";
 
 import HomeScreen from "./screen/HomeScreen";
 import Footer from "./components/Footer";
@@ -24,8 +23,7 @@ function App() {
           <Route path="book/:id" element={<BookScreen />} exact />
           <Route path="/Login" element={<LoginScreen />} exact />
           <Route path="/Register" element={<RegisterScreen />} exact />
-
-          <Route path="/cart" element={<CartScreen />} exact />
+          <Route path="/cart/:id?" element={<CartScreen />} exact />
         </Routes>
       </main>
     </div>

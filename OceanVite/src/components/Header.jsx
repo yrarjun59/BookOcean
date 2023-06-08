@@ -21,6 +21,9 @@ function Header() {
     dispatch(logout());
   };
 
+  const cart = useSelector((state) => state.cart);
+  const { cartItems } = cart;
+
   return (
     <div className="my-[20px] h-[80px] flex justify-center mx-[100px]">
       {/* logo */}
@@ -48,7 +51,7 @@ function Header() {
           />
 
           <span className=" absolute bg-[#FF7A5C] text-[#ffffff] font-bold rounded-full w-5 h-5 text-xs text-center right-[3px] -top-2">
-            12
+            {cartItems ? cartItems.length : 0}
           </span>
         </Link>
         {/* wishlists */}
