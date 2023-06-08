@@ -7,7 +7,7 @@ function Book({ book }) {
     <div>
         <div className="relative h-[350px] w-[200px] rounded-[10px]">
           {/* images */}
-          <Link to="/book">
+          <Link to={`/book/${book.id}`}>
             <img
               src={book.image}
               alt="book image"
