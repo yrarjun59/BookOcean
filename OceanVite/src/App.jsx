@@ -10,6 +10,7 @@ import Header from "./components/Header";
 import { Routes, Route } from "react-router-dom";
 import LoginScreen from "./screen/LoginScreen";
 import RegisterScreen from "./screen/RegisterScreen";
+import CartScreen from "./screen/CartScreen";
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
           <Route path="/" element={<HomeScreen />} exact />
           <Route path="/Login" element={<LoginScreen />} exact />
           <Route path="/Register" element={<RegisterScreen />} exact />
+
+          <Route path="/cart" element={<CartScreen />} exact />
         </Routes>
       </main>
     </div>
