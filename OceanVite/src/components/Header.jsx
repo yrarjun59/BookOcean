@@ -73,7 +73,6 @@ function Header() {
 
           <Link
             onClick={logoutHandler}
-            to="/logout"
             className="capitalize mx-3 mt-1 text-center text-[#eb1757] font-bold"
           >
             logout
